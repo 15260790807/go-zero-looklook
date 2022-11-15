@@ -1,0 +1,26 @@
+syntax = "v1"
+
+info(
+	title: "测试服务"
+	desc: "测试服务"
+	author: "zjq"
+	email: "1223@qq.com"
+	version: "v1"
+)
+
+import(
+	"ts/ts.api"
+)
+
+//==============================> test v1 <========================================
+//no need login
+@server(
+	prefix: test/v1
+	group: testgroup
+)
+service test {
+	
+	@doc "third payment：wechat pay callback"
+	@handler testhandler
+	post /testac/testac (tsReq) returns (tsResp)
+}

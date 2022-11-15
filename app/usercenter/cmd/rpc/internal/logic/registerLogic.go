@@ -12,7 +12,7 @@ import (
 	"looklook/common/xerr"
 )
 
-var ErrUserAlreadyRegisterError = xerr.NewErrMsg("user has been registered")
+var ErrUserAlreadyRegisterError = xerr.NewErrMsg("user has been registered1112244455")
 
 type RegisterLogic struct {
 	ctx    context.Context
@@ -28,8 +28,7 @@ func NewRegisterLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Register
 	}
 }
 
-func (l *RegisterLogic) Register(in *usercenter.RegisterReq) (*usercenter.RegisterResp, error) {
-
+func (l *RegisterLogic) Register(in *usercenter.RegisterReq) (*usercenter.RegisterResp, error) { 
 	user, err := l.svcCtx.UserModel.FindOneByMobile(l.ctx,in.Mobile)
 	if err != nil && err != model.ErrNotFound {
 		return nil, errors.Wrapf(xerr.NewErrCode(xerr.DB_ERROR), "mobile:%s,err:%v", in.Mobile, err)

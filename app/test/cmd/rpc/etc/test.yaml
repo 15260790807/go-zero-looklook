@@ -1,0 +1,8 @@
+Name: test.rpc
+ListenOn: 0.0.0.0:2005
+Mode: dev
+# Etcd:
+#   Hosts:
+#   - 127.0.0.1:2379
+#   Key: test.rpc
+#rpc service

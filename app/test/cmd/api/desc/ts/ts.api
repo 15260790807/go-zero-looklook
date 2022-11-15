@@ -1,0 +1,20 @@
+syntax = "v1"
+
+info(
+	title: "测试服务"
+	desc: "测试服务"
+	author: "zjq"
+	email: "13247629622@163.com"
+	version: "v1"
+)
+
+type (
+	tsReq {
+		OrderSn     string `json:"orderSn"`
+		ServiceType string `json:"serviceType"`
+	}
+
+	tsResp {
+		Msg     string `json:"msg"` 
+	}
+)

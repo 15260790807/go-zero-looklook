@@ -1,0 +1,7 @@
+Name: test
+Host: 0.0.0.0
+Port: 1005
+TestRpcConf:
+  Endpoints:
+    - 127.0.0.1:2005
+  NonBlock: true
