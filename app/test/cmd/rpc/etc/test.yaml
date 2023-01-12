@@ -6,3 +6,5 @@ Mode: dev
 #   - 127.0.0.1:2379
 #   Key: test.rpc
 #rpc service
+DB:
+  DataSource: root:PXDN93VRKUm8TeE7@tcp(mysql:3306)/looklook_test?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
