@@ -14,7 +14,9 @@ func TestHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var req types.TsReq
 		if err := httpx.Parse(r, &req); err != nil {
-			httpx.Error(w, err)
+			var resp types.TsResp
+			resp.Msg = err.Error()
+			httpx.OkJson(w, resp)
 			return
 		}
 
