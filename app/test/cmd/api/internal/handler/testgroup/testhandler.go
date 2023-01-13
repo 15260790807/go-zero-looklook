@@ -3,10 +3,11 @@ package testgroup
 import (
 	"net/http"
 
-	"github.com/zeromicro/go-zero/rest/httpx"
 	"looklook/app/test/cmd/api/internal/logic/testgroup"
 	"looklook/app/test/cmd/api/internal/svc"
 	"looklook/app/test/cmd/api/internal/types"
+
+	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
 func TestHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {

@@ -32,15 +32,16 @@ func (l *TestacLogic) Testac(in *pb.TsReq) (*pb.TsResp, error) {
 
 	// }
 	user := new(model.JqTest)
+	user.Name = "test"
 	_, err := l.svcCtx.JqTestModel.Insert(l.ctx, user)
 	resp := pb.TsResp{
 		Msg: "rpc添加成功1112223334",
 	}
-	// if err != nil {
-	// 	resp = pb.TsResp{
-	// 		Msg: "121212",
-	// 	}
-	// }
+	if err != nil {
+		resp = pb.TsResp{
+			Msg: "121212",
+		}
+	}
 
 	return &resp, nil
 }
